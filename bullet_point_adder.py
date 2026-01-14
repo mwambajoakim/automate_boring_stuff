@@ -5,6 +5,7 @@ pyperclip.set_clipboard('wl-clipboard')
 
 if __name__ == '__main__':
     text = pyperclip.paste()
+    text = text.replace('\\n', '\n')
     lines = text.split('\n')
 
     for i in range(len(lines)):
